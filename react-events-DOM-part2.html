@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+ <!-- REACT DOM LIBRARY -->
+   <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  
+  <title>react-events</title>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+
+   class Warning extends React.Component {
+     touchHandler(){
+        alert('Ouch, that is hot!');
+     }
+     drinkHandler(){
+       alert('Brain freeze!');
+     }
+    render() {
+    
+     return(
+          <div>
+            <h1>Life Warnings</h1>
+            <button onMouseOver={this.touchHandler}>Touch Stove</button>
+            <button onMouseOver={this.drinkHandler}>Drink Siurpee Really Fast</button>
+          </div>
+     );
+
+    }
+
+
+   }
+
+
+var destination =  document.getElementById('app');
+
+
+  ReactDOM.render (
+
+  <Warning/>,
+
+    destination
+    );
+    </script>
+    </body>
+    </html>
